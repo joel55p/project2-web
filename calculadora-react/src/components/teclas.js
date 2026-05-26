@@ -6,3 +6,12 @@ export const TECLAS = [
 ]
 
 export const OPERADORES = ['*', '-', '+', '=', 'C']
+
+export const LABELS = {
+  '+': 'sumar',
+  '-': 'restar',
+  '*': 'multiplicar',
+  '=': 'igual',
+  C: 'limpiar',
+  '.': 'punto decimal'
+}

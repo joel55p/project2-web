@@ -1,7 +1,7 @@
-import Boton from '../components/Boton'
+import Boton from '../componentes/Boton'
 
 export default {
-  title: 'Components/Boton',
+  title: 'Componentes/Boton',
   component: Boton
 }
 
@@ -13,6 +13,18 @@ export const Numero = {
 
 export const Operador = {
   args: { etiqueta: '+', alPresionar, variante: 'operador' }
+}
+
+export const Division = {
+  args: { etiqueta: '/', alPresionar, variante: 'operador' }
+}
+
+export const Modulo = {
+  args: { etiqueta: '%', alPresionar, variante: 'operador' }
+}
+
+export const CambioSigno = {
+  args: { etiqueta: '+/-', alPresionar, variante: 'operador' }
 }
 
 export const Igual = {

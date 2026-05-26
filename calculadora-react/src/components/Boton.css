@@ -1,0 +1,18 @@
+.calc-boton {
+  background: #111;
+  color: #fff;
+  border: 1px solid #1a6ef5;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  font-family: 'Courier New', monospace;
+  cursor: pointer;
+  padding: 18px;
+  transition: background 0.15s, transform 0.1s;
+  width: 100%;
+}
+
+.calc-boton:hover { background: #1a3a7a; }
+.calc-boton:active { transform: scale(0.95); }
+.calc-boton--operador { color: #1a6ef5; font-weight: bold; }
+.calc-boton--igual { background: #1a6ef5; color: #000; font-weight: bold; }
+.calc-boton--igual:hover { background: #2a7fff; }

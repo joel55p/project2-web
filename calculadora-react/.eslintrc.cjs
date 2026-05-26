@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es2021: true
   },
-  extends: ['standard', 'plugin:react/recommended'],
+  extends: ['standard', 'plugin:react/recommended', 'plugin:storybook/recommended'],
   plugins: ['react'],
   settings: {
     react: { version: 'detect' }

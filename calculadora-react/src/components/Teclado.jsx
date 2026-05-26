@@ -1,27 +1,20 @@
 import PropTypes from 'prop-types'
 import Boton from './Boton'
+import { TECLAS, OPERADORES } from './teclas'
 import './Teclado.css'
-const TECLAS = [
-  ['7', '8', '9', '*'],
-  ['4', '5', '6', '-'],
-  ['1', '2', '3', '+'],
-  ['.', '0', 'C', '=']
-]
-const OPERADORES = ['*', '-', '+', '=', 'C']
+
+const getVariante = (t) => {
+  if (t === '=') return 'igual'
+  return OPERADORES.includes(t) ? 'operador' : 'defecto'
+}
 const Teclado = ({ alPresionar }) => (
   <div className="teclado">
     {TECLAS.flat().map(t => (
-      <Boton
-        key={t}
-        etiqueta={t}
-        alPresionar={alPresionar}
-        variante={t === '=' ? 'igual' : OPERADORES.includes(t) ? 'operador' : 'defecto'}
-      />
+      <Boton key={t} etiqueta={t} alPresionar={alPresionar} variante={getVariante(t)} />
     ))}
   </div>
 )
 Teclado.propTypes = {
   alPresionar: PropTypes.func.isRequired
 }
-
 export default Teclado

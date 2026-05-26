@@ -7,20 +7,12 @@ const TECLAS = [
   ['1', '2', '3', '+'],
   ['.', '0', 'C', '=']
 ]
-
 const OPERADORES = ['*', '-', '+', '=', 'C']
-
 const Teclado = ({ alPresionar }) => (
   <div className="teclado">
     {TECLAS.flat().map(t => (
-      <Boton
-        key={t}
-        etiqueta={t}
-        alPresionar={alPresionar}
-        variante={t === '=' ? 'igual' : OPERADORES.includes(t) ? 'operador' : 'defecto'}
-      />
+      <Boton key={t} etiqueta={t} alPresionar={alPresionar} variante={t === '=' ? 'igual' : OPERADORES.includes(t) ? 'operador' : 'defecto'}/>
     ))}
   </div>
 )
-
 export default Teclado

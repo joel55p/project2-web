@@ -1,8 +1,8 @@
 import './Display.css'
 
-const Display = ({ value }) => (
+const Display = ({ valor }) => (
   <div className="display">
-    <span className="display-value">{value}</span>
+    <span className="display-value">{valor}</span>
   </div>
 )
 

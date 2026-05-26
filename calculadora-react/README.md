@@ -1,16 +1,77 @@
-# React + Vite
+# Calculadora Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Calculadora funcional construida con React y Vite. Soporta suma, resta,
+multiplicación, división, módulo y cambio de signo. Incluye validaciones
+de límite de 9 caracteres y manejo de errores.
 
-Currently, two official plugins are available:
+## Requisitos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Node.js 18 o superior
+- npm
 
-## React Compiler
+## Instalación
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Clona el repositorio e instala las dependencias:
 
-## Expanding the ESLint configuration
+```bash
+git clone https://github.com/joel55p/project2-web.git
+cd project2-web/calculadora-react
+npm install --legacy-peer-deps
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Correr la aplicación
+
+```bash
+npm run dev
+```
+
+Abre http://localhost:5173 en tu navegador.
+
+## Correr los tests
+
+```bash
+npm test
+```
+
+Para correr los tests una sola vez sin modo watch:
+
+```bash
+npm test -- --run
+```
+
+## Correr Storybook
+
+```bash
+npm run storybook
+```
+
+Abre http://localhost:6006 en tu navegador. Incluye historias para los
+componentes Boton, Display y Teclado con sus distintos estados y variantes.
+
+## Correr lint
+
+```bash
+npm run lint
+```
+
+El proyecto usa ESLint con JavaScript Standard Style. Reglas personalizadas:
+- Prohibicion de punto y coma
+- Maximo 120 caracteres por linea
+
+## Funcionalidades
+
+- Suma, resta, multiplicacion y division
+- Modulo (%)
+- Cambio de signo (+/-)
+- Punto decimal
+- Limite de 9 caracteres en pantalla
+- Muestra ERROR para resultados negativos o mayores a 999999999
+- Division por cero muestra ERROR
+
+## Tecnologías
+
+- React 19
+- Vite
+- Vitest + Testing Library
+- Storybook
+- ESLint con JavaScript Standard Style

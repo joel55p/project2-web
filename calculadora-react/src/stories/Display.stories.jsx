@@ -20,4 +20,3 @@ export const ConDecimal = {
 export const EstadoError = {
   args: { valor: 'ERROR' }
 }
-

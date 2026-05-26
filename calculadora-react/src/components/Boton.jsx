@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import './Boton.css'
 
 const Boton = ({ etiqueta, alPresionar, variante = 'defecto' }) => (
@@ -8,5 +9,11 @@ const Boton = ({ etiqueta, alPresionar, variante = 'defecto' }) => (
     {etiqueta}
   </button>
 )
+
+Boton.propTypes = {
+  etiqueta: PropTypes.string.isRequired,
+  alPresionar: PropTypes.func.isRequired,
+  variante: PropTypes.string
+}
 
 export default Boton

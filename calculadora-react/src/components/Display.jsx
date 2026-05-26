@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import './Display.css'
 
 const Display = ({ valor }) => (
@@ -5,5 +6,9 @@ const Display = ({ valor }) => (
     <span className="display-value">{valor}</span>
   </div>
 )
+
+Display.propTypes = {
+  valor: PropTypes.string.isRequired
+}
 
 export default Display

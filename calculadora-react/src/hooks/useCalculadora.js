@@ -4,9 +4,18 @@ const MAXIMO = 999999999
 const MAX_CARACTERES = 9
 
 const calcular = (a, op, b) => {
-  const resultado = op === '+' ? a + b : op === '-' ? a - b : a * b
+  if (op === '/' && b === 0) return 'ERROR'
+  const resultado = op === '+'
+    ? a + b
+    : op === '-'
+      ? a - b
+      : op === '*'
+        ? a * b
+        : op === '/'
+          ? a / b
+          : a % b
   if (resultado < 0 || resultado > MAXIMO) return 'ERROR'
-  return String(resultado).slice(0, MAX_CARACTERES)
+  return parseFloat(resultado.toFixed(8)).toString().slice(0, MAX_CARACTERES)
 }
 
 const useCalculadora = () => {
@@ -45,6 +54,13 @@ const useCalculadora = () => {
     setEsperaSiguiente(true)
   }
 
+  const presionarMasMenos = () => {
+    if (display === 'ERROR' || display === '0') return
+    const nuevo = display.startsWith('-') ? display.slice(1) : `-${display}`
+    if (nuevo.length > MAX_CARACTERES) return
+    setPantalla(nuevo)
+  }
+
   const limpiar = () => {
     setPantalla('0')
     setAnterior(null)
@@ -55,7 +71,8 @@ const useCalculadora = () => {
   const manejarTecla = (tecla) => {
     if (tecla === 'C') return limpiar()
     if (tecla === '=') return presionarIgual()
-    if (['+', '-', '*'].includes(tecla)) return presionarOperador(tecla)
+    if (tecla === '+/-') return presionarMasMenos()
+    if (['+', '-', '*', '/', '%'].includes(tecla)) return presionarOperador(tecla)
     presionarNumero(tecla)
   }
 

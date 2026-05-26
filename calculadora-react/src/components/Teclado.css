@@ -3,3 +3,7 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
+
+.calc-boton--igual {
+  grid-column: span 2;
+}

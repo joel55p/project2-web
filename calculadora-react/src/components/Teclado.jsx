@@ -2,13 +2,11 @@ import PropTypes from 'prop-types'
 import Boton from './Boton'
 import { TECLAS, OPERADORES } from './teclas'
 import './Teclado.css'
-
 // Determina la variante visual del botón
 const getVariante = (t) => {
   if (t === '=') return 'igual'
   return OPERADORES.includes(t) ? 'operador' : 'defecto'
 }
-
 const Teclado = ({ alPresionar }) => (
   <div className="teclado">
     {TECLAS.flat().map(t => (
@@ -16,9 +14,7 @@ const Teclado = ({ alPresionar }) => (
     ))}
   </div>
 )
-
 Teclado.propTypes = {
   alPresionar: PropTypes.func.isRequired
 }
-
 export default Teclado

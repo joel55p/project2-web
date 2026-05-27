@@ -1,7 +1,8 @@
-import { renderHook, act } from '@testing-library/react'
+import { renderHook, act } from '@testing-library/react' 
 import { describe, it, expect } from 'vitest'
 import useCalculadora from '../hooks/useCalculadora'
 
+// se importan las funciones necesarias para realizar pruebas unitarias con Vitest, incluyendo renderHook para renderizar el hook useCalculadora y act para simular acciones que afectan el estado del hook, así como describe, it y expect para estructurar las pruebas y hacer afirmaciones sobre los resultados esperados.
 describe('useCalculadora', () => {
   it('muestra 0 al inicio', () => {
     const { result } = renderHook(() => useCalculadora())

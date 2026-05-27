@@ -1,41 +1,41 @@
-*, *::before, *::after {
+*, *::before, *::after { /* se aplica un reset de estilos a todos los elementos, incluyendo los pseudo-elementos ::before y ::after, para asegurar que no haya cosas predeterminadas que puedan afectar el diseño de la aplicación */
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-html, body, #root {
+html, body, #root { /*para que ocupe toda la pantalla */
   height: 100%;
   width: 100%;
 }
 
-body {
+body { /*para que resalte en si la calculadora */
   background: #f0f4ff;
   font-family: 'Courier New', monospace;
 }
 
-#root {
+#root { 
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
 }
 
-.app {
+.app { /* estilos para el contenedor principal de la aplicación, que centra su contenido y establece un espacio entre  hijos */
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
 }
 
-.app-titulo {
+.app-titulo { /* estilos para el título */
   color: #1a6ef5;
   font-size: 1rem;
   letter-spacing: 8px;
   opacity: 0.8;
 }
 
-.calculadora {
+.calculadora { /* estilos para el contenedor de la calculadora, que le da un fondo oscuro, bordes redondeados, padding y una sombra para resaltar el componente en si */
   background: #0a0a1a;
   border: 1px solid #1a6ef5;
   border-radius: 12px;

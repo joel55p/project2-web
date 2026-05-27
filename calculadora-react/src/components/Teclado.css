@@ -1,9 +1,9 @@
-.teclado {
+.teclado { /* estilos para el componente Teclado de la calculadora */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
 
-.calc-boton--igual {
+.calc-boton--igual { /* estilos específicos para el boton de igual que ocupa dos columnas en el grid */
   grid-column: span 2;
 }

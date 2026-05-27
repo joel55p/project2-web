@@ -1,4 +1,4 @@
-.calc-boton {
+.calc-boton { /* estilos base para los botones de la calculadora */
   background: #111;
   color: #fff;
   border: 1px solid #1a6ef5;
@@ -11,8 +11,8 @@
   width: 100%;
 }
 
-.calc-boton:hover { background: #1a3a7a; }
-.calc-boton:active { transform: scale(0.95); }
-.calc-boton--operador { color: #1a6ef5; font-weight: bold; }
+.calc-boton:hover { background: #1a3a7a; } /* cambio de fondo al pasar el mouse por encima del botón */
+.calc-boton:active { transform: scale(0.95); } /* efecto de pulsación al hacer clic en el botón */
+.calc-boton--operador { color: #1a6ef5; font-weight: bold; } /* estilos específicos para los botones de operadores */
 .calc-boton--igual { background: #1a6ef5; color: #000; font-weight: bold; }
-.calc-boton--igual:hover { background: #2a7fff; }
+.calc-boton--igual:hover { background: #2a7fff; } /* cambio de fondo al pasar el mouse por encima del botón de igual */

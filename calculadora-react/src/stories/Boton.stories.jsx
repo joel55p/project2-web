@@ -1,11 +1,12 @@
-import Boton from '../components/Boton'
+import Boton from '../components/Boton' // se importa el componente Boton para ser utilizado en las historias de Storybook
 
 export default {
   title: 'Componentes/Boton',
   component: Boton
 }
 
-const alPresionar = (etiqueta) => console.log('Presionado:', etiqueta)
+// función para manejar el evento de presionar un boton, simplemente imprime la etiqueta del botón presionado en la consola
+const alPresionar = (etiqueta) => console.log('Presionado:', etiqueta) 
 
 export const Numero = {
   args: { etiqueta: '5', alPresionar, variante: 'defecto' }

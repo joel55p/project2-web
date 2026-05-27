@@ -1,6 +1,6 @@
 import Teclado from '../components/Teclado'
 
-// se define la historia para el componente Teclado, con un caso por defecto que muestra el teclado completo de la calculadora, utilizando  tambien Storybook 
+// Historia por defecto del teclado completo
 export default {
   title: 'Components/Teclado',
   component: Teclado
